@@ -1,0 +1,38 @@
+{
+  "name": "grunt-dill-js",
+  "description": "Grunt task for running Dill.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mojotech/grunt-dill-js",
+  "author": "MojoTech",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mojotech/grunt-dill-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mojotech/grunt-dill-js/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mojotech/grunt-dill-js/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {},
+  "dependencies": {
+    "dill": "~0.5.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin",
+    "cucumber",
+    "dill"
+  ]
+}
