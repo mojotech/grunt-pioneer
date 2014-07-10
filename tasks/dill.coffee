@@ -2,7 +2,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'dill', 'Grunt task for running Dill.js', ->
     _ = grunt.util._
 
-    {features, steps, widgets, format} = @options()
+    {features, steps, widgets, format, coffee} = @options()
 
     execOptions = []
 
@@ -23,6 +23,9 @@ module.exports = (grunt) ->
     unless _.isEmpty(format)
       execOptions.push '--format'
       execOptions.push format
+
+    if coffee
+      execOptions.push '--coffee'
 
     grunt.verbose.writeln 'Exec Options: ' + execOptions.join(' ')
 
