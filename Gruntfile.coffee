@@ -7,4 +7,6 @@ module.exports = (grunt) ->
         widgets: 'widgets'
         format: 'pretty'
 
+  grunt.registerTask 'test', 'dill'
+
   grunt.loadTasks 'tasks'

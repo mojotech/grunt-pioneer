@@ -20,7 +20,9 @@
   "engines": {
     "node": "*"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "grunt test"
+  },
   "dependencies": {
     "dill": "~0.5.0"
   },
