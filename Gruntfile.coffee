@@ -6,6 +6,8 @@ module.exports = (grunt) ->
         steps: 'steps'
         widgets: 'widgets'
         format: 'pretty'
+        driver: 'phantomjs'
+        preventBrowserReload: true
 
   grunt.registerTask 'test', 'dill'
 
