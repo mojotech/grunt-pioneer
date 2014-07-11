@@ -6,31 +6,31 @@ module.exports = (grunt) ->
 
     execOptions = []
 
-    if _.isEmpty(features)
-      optionsString = JSON.stringify(@options(), null, '  ')
+    if _.isEmpty features
+      optionsString = JSON.stringify @options(), null, '  '
       grunt.fail.warn "'features' option is required -- not found in: \n\n#{optionsString}\n\n"
     else
       execOptions.push features
 
-    unless _.isEmpty(steps)
+    unless _.isEmpty steps
       execOptions.push '--require'
       execOptions.push steps
 
-    unless _.isEmpty(widgets)
+    unless _.isEmpty widgets
       execOptions.push '--require'
       execOptions.push widgets
 
-    unless _.isEmpty(format)
+    unless _.isEmpty format
       execOptions.push '--format'
       execOptions.push format
 
     if coffee
       execOptions.push '--coffee'
 
-    grunt.verbose.writeln 'Exec Options: ' + execOptions.join(' ')
+    grunt.verbose.writeln 'Exec Options: ' + execOptions.join ' '
 
     exec = require('child_process').execFile
-    done = grunt.task.current.async()
+    done = @async()
 
     exec './node_modules/.bin/dill', execOptions, (error, stdout, stderr) ->
       grunt.log.writeln stdout
