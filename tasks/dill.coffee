@@ -29,9 +29,12 @@ module.exports = (grunt) ->
 
     grunt.verbose.writeln 'Exec Options: ' + execOptions.join ' '
 
-    exec = require('child_process').execFile
     done = @async()
 
-    exec './node_modules/.bin/dill', execOptions, (error, stdout, stderr) ->
-      grunt.log.writeln stdout
-      done error
+    spawn = require('child_process').spawn
+    proc = spawn './node_modules/.bin/dill', execOptions
+    proc.stdout.on 'data', (data) ->
+      grunt.log.writeln data.toString().trimRight()
+
+    proc.on 'exit', (code) ->
+      done code is 0
