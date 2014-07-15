@@ -6,9 +6,12 @@ Urgh! Dill.js
 ## Getting Started
 
 #### Install the package.
-`npm install grunt-dill-js`
+`npm install grunt-dill-js --save-dev`
 
-#### Add the `dill` task to your gruntfile.
+#### Load the `grunt-dill-js` plugin in your gruntfile.
+`grunt.loadNpmTasks('grunt-dill-js')`
+
+#### Configure the `dill` task in your gruntfile.
 ```coffee
 dill:
   options:
