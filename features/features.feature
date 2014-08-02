@@ -1,7 +1,7 @@
 Feature: Features
   As Xzibit
   I want a features.feature file
-  So that I can dill test my dill tests
+  So that I can pioneer test my pioneer tests
 
   Scenario: A test scenario
     Given I have the numbers 1 and 3

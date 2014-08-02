@@ -1,5 +1,5 @@
 module.exports = (grunt) ->
-  grunt.registerTask 'dill', 'Grunt task for running Dill.js', ->
+  grunt.registerTask 'pioneer', 'Grunt task for running Pioneer', ->
     _ = grunt.util._
 
     {features, steps, widgets, format, coffee} = @options()
@@ -32,7 +32,7 @@ module.exports = (grunt) ->
     done = @async()
 
     spawn = require('child_process').spawn
-    proc = spawn './node_modules/.bin/dill', execOptions
+    proc = spawn './node_modules/.bin/pioneer', execOptions
     proc.stdout.on 'data', (data) ->
       grunt.log.writeln data.toString().trimRight()
 
