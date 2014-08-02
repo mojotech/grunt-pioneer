@@ -1,19 +1,19 @@
-grunt-dill-js
+grunt-pioneer
 =============
 
-Urgh! Dill.js 
+Urgh! Pioneer
 
 ## Getting Started
 
 #### Install the package.
-`npm install grunt-dill-js --save-dev`
+`npm install grunt-pioneer --save-dev`
 
-#### Load the `grunt-dill-js` plugin in your gruntfile.
-`grunt.loadNpmTasks('grunt-dill-js')`
+#### Load the `grunt-pioneer` plugin in your gruntfile.
+`grunt.loadNpmTasks('grunt-pioneer')`
 
-#### Configure the `dill` task in your gruntfile.
+#### Configure the `pioneer` task in your gruntfile.
 ```coffee
-dill:
+pioneer:
   options:
     features: 'features'
     steps: 'steps'
@@ -22,8 +22,8 @@ dill:
     coffee: true
 ```
 
-#### Run dill!
-`grunt dill`
+#### Run pioneer!
+`grunt pioneer`
 
 
 ## Grunt Options
