@@ -24,7 +24,7 @@
     "test": "grunt test"
   },
   "dependencies": {
-    "pioneer": "~0.6.0"
+    "pioneer": "~0.10.0"
   },
   "devDependencies": {
     "grunt": "~0.4.5"
