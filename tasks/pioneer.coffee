@@ -2,7 +2,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'pioneer', 'Grunt task for running Pioneer', ->
     _ = grunt.util._
 
-    {features, steps, widgets, format, coffee} = @options()
+    {features, steps, widgets, format, driver, coffee} = @options()
 
     execOptions = []
 
@@ -19,6 +19,10 @@ module.exports = (grunt) ->
     unless _.isEmpty widgets
       execOptions.push '--require'
       execOptions.push widgets
+
+    unless _.isEmpty driver
+      execOptions.push '--driver'
+      execOptions.push driver
 
     unless _.isEmpty format
       execOptions.push '--format'
