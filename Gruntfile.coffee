@@ -5,6 +5,7 @@ module.exports = (grunt) ->
         features: 'features'
         steps: 'steps'
         widgets: 'widgets'
+        driver: 'phantomjs'
         format: 'pretty'
 
   grunt.registerTask 'test', 'pioneer'
